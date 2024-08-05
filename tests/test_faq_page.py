@@ -37,6 +37,5 @@ class TestFaqPage:
         WebDriverWait(driver_setup, 10).until(expected_conditions.element_to_be_clickable(QuestionPageLocators.
                                                                                           buttons_questions(question)))
         home_page.click_buttons_questions(question)
-        answer_to_question = home_page.getting_text_in_questions(answer)
-        assert answer_to_question == expected_result
+        assert home_page.getting_text_in_questions(answer) == expected_result
         driver_setup.quit()

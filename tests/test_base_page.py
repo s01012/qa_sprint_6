@@ -53,6 +53,5 @@ class TestBasePage:
         home_page.click_element(HomePageLocators.cookie_button)
         home_page.scroll_to_element()
         home_page.click_order_button_in_main()
-        current_url = home_page.current_url()
-        assert current_url == Links.order_page
+        assert home_page.current_url() == Links.order_page
         driver_setup.quit()
