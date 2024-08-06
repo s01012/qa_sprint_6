@@ -20,7 +20,6 @@ class TestBasePage:
             expected_conditions.visibility_of_element_located(HomePageLocators.logo_dzen))
         current_url = home_page.current_url()
         assert Links.yandex_dzen in current_url
-        driver_setup.quit()
 
     @allure.title('Проверка перехода на главную страницу из страницы заказа')
     def test_transition_to_main_click_on_logo_identical_url_value(self, driver_setup):
@@ -31,7 +30,6 @@ class TestBasePage:
         home_page.click_logo_scooter_in_button()
         current_url = home_page.current_url()
         assert current_url == Links.main_page
-        driver_setup.quit()
 
     @allure.title('Проверка перехода на страницу заказа из главной страницы, если нажать кнопку Заказать в хедере')
     def test_transition_to_order_click_on_button_header_identical_url_value(self, driver_setup):
@@ -42,7 +40,6 @@ class TestBasePage:
         home_page.click_order_button_in_header()
         current_url = home_page.current_url()
         assert current_url == Links.order_page
-        driver_setup.quit()
 
     @allure.title('Проверка перехода на страницу заказа из главной страницы, если нажать кнопку Заказать в мейн')
     def test_transition_to_order_click_on_button_main_identical_url_value(self, driver_setup):
@@ -54,4 +51,3 @@ class TestBasePage:
         home_page.scroll_to_element()
         home_page.click_order_button_in_main()
         assert home_page.current_url() == Links.order_page
-        driver_setup.quit()

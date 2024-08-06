@@ -38,4 +38,3 @@ class TestFaqPage:
                                                                                           buttons_questions(question)))
         home_page.click_buttons_questions(question)
         assert home_page.getting_text_in_questions(answer) == expected_result
-        driver_setup.quit()

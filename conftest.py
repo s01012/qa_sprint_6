@@ -6,4 +6,5 @@ from selenium import webdriver
 def driver_setup():
     driver = webdriver.Firefox()
     driver.maximize_window()
-    return driver
+    yield driver
+    driver.quit()

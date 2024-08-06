@@ -55,4 +55,3 @@ class TestOrderPage:
         WebDriverWait(driver_setup, 3).until(expected_conditions.visibility_of_element_located(OrderPageLocators.
                                                                                                finish_title_in_order))
         assert finish_title_in_order_popup in order_page.getting_text_in_order_popup()
-        driver_setup.quit()
